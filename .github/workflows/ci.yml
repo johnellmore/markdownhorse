@@ -1,3 +1,5 @@
+name: markdownhorse
+
 on:
   push:
     branches:
