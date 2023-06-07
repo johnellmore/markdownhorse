@@ -20,7 +20,7 @@ View the source of this page to see an example.
 - **Inline HTML**
 - **Emoji**. For example, `:horse:` shows :horse:.
 - **Code syntax highlighting** via [highlight.js](https://www.npmjs.com/package/highlight.js)
-- **Heading anchors**. For example: [`{BUILD_DOMAIN}/#supports`](//{BUILD_DOMAIN}/#features)
+- **Heading anchors**. For example: [`{BUILD_DOMAIN}/#features`](//{BUILD_DOMAIN}/#features)
 - **Single external JS file**. Only requires one additional network resource.
 - **Version-pinned**. The `integrity` attribute guarantees that the JS won't change later and inject ads or something. Old versions will remain perpetually available (barring security issues).
 
@@ -33,4 +33,4 @@ View the source of this page to see an example.
 
 ---
 
-_A project by [John Ellmore](https://johnellmore.com). MIT Licensed. Inspired by [MarkDeep](https://casual-effects.com/markdeep/). [Contribute on Github](https://github.com/johnellmore/markdownhorse)._
+_MIT Licensed. Inspired by [MarkDeep](https://casual-effects.com/markdeep/). [Contribute on Github](https://github.com/johnellmore/markdownhorse)._
