@@ -1,6 +1,8 @@
-# :horse: markdown.horse :horse:
+# :horse: [markdown.horse](https://markdown.horse) :horse:
 
 **_Write markdown files, serve them as HTML._**
+
+![CI status badge](https://github.com/johnellmore/markdownhorse/actions/workflows/ci.yml/badge.svg)
 
 Add this line to the beginning of any Markdown document:
 
