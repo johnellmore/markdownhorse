@@ -1,0 +1,3 @@
+/v*.js
+  Access-Control-Allow-Origin: *
+  Cache-Control: immutable
