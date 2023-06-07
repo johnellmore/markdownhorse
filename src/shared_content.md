@@ -1,22 +1,10 @@
-# :horse: markdown.horse :horse:
-
-**_Write markdown files, serve them as HTML._**
-
-Add this line to the beginning of any Markdown document:
-
-```html
-<script src="https://markdown.horse/v2.js" crossorigin integrity="sha256-gFKyHEfhRTLD0eXU83L21dCkzWBkx3EEhZrulE5G3d0="></script>
-```
-
-and change the extension to `.html` or `.md.html`. When you open the file in a browser, you'll see nicely-rendered Markdown--no extra work required.
-
 ## Features
 
 - **CommonMark spec**
 - **Inline HTML**
 - **Emoji**. For example, `:horse:` shows :horse:.
 - **Code syntax highlighting** via [highlight.js](https://www.npmjs.com/package/highlight.js)
-- **Heading anchors**. For example: [`markdown.horse/#features`](//markdown.horse/#features)
+- **Heading anchors**. For example: [`{BUILD_DOMAIN}/#features`](//{BUILD_DOMAIN}/#features)
 - **Single external JS file**. Only requires one additional network resource.
 - **Works locally**. No HTTP server needed; local `.md`/`.html` files work great without being uploaded anywhere.
 - **Version-pinned**. The `integrity` attribute guarantees that the JS won't change later and inject ads or something. Old versions will remain perpetually available (barring security issues).

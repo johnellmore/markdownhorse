@@ -1,4 +1,4 @@
-<script src="https://markdown.horse/v1.js" crossorigin integrity="sha256-jRWwvnxYi/JqUddc/1geKvDW+8m1mkC0C7pBTkR6Uqc="></script>
+<script src="https://markdown.horse/v2.js" crossorigin integrity="sha256-gFKyHEfhRTLD0eXU83L21dCkzWBkx3EEhZrulE5G3d0="></script>
 
 # :horse: markdown.horse :horse:
 
@@ -7,7 +7,7 @@
 Add this line to the beginning of any Markdown document:
 
 ```html
-<script src="https://markdown.horse/v1.js" crossorigin integrity="sha256-jRWwvnxYi/JqUddc/1geKvDW+8m1mkC0C7pBTkR6Uqc="></script>
+<script src="https://markdown.horse/v2.js" crossorigin integrity="sha256-gFKyHEfhRTLD0eXU83L21dCkzWBkx3EEhZrulE5G3d0="></script>
 ```
 
 and change the extension to `.html` or `.md.html`. When you open the file in a browser, you'll see nicely-rendered Markdown--no extra work required.
@@ -22,14 +22,14 @@ View the source of this page to see an example.
 - **Code syntax highlighting** via [highlight.js](https://www.npmjs.com/package/highlight.js)
 - **Heading anchors**. For example: [`markdown.horse/#features`](//markdown.horse/#features)
 - **Single external JS file**. Only requires one additional network resource.
+- **Works locally**. No HTTP server needed; local `.md`/`.html` files work great without being uploaded anywhere.
 - **Version-pinned**. The `integrity` attribute guarantees that the JS won't change later and inject ads or something. Old versions will remain perpetually available (barring security issues).
 
 ## Known issues
 
-- There's a [FOUC](https://en.wikipedia.org/wiki/Flash_of_unstyled_content) before markdown.horse initializes the page.
+- There's a [FOUC](https://en.wikipedia.org/wiki/Flash_of_unstyled_content) before markdown.horse loads. The JS asset has a `cache-control: immutable` header, so the FOUC doesn't normally appear on subsequent page loads.
 - If you use `<script>` tags in your Markdown doc, they'll run twice: on initial document load, and again after markdown.horse formats everything.
 - No automatic dark mode (yet) for those with browser/OS preferences set to dark mode.
-- The JS file is a little big (673KB). It's mostly language definitions for syntax highlighting.
 
 ---
 
