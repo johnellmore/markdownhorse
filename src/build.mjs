@@ -44,7 +44,7 @@ const bundleSizeReadable = Math.floor(bundleContents.byteLength / 1024) + 'KB';
 const integrity = `sha256-${hash}`;
 const domain = env.BUILD_DOMAIN || "markdown.horse";
 const protocol = domain === "markdown.horse" ? 'https' : 'http';
-const scriptTag = `<script crossorigin src="${protocol}://${domain}/${distFilename}" integrity="${integrity}"></script>`;
+const scriptTag = `<script src="${protocol}://${domain}/${distFilename}" crossorigin integrity="${integrity}"></script>`;
 // variable replacement
 const interpolateVars = (str) => {
   return str
