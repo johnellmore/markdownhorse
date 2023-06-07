@@ -5,7 +5,7 @@
 Add this line to the beginning of any Markdown document:
 
 ```html
-<script src="http://127.0.0.1:8000/v1.js" integrity="sha256-jRWwvnxYi/JqUddc/1geKvDW+8m1mkC0C7pBTkR6Uqc="></script>
+<script src="https://markdown.horse/v1.js" integrity="sha256-jRWwvnxYi/JqUddc/1geKvDW+8m1mkC0C7pBTkR6Uqc="></script>
 ```
 
 and change the extension to `.html` or `.md.html`. When you open the file in a browser, you'll see nicely-rendered Markdown--no extra work required.
@@ -16,7 +16,7 @@ and change the extension to `.html` or `.md.html`. When you open the file in a b
 - **Inline HTML**
 - **Emoji**. Example: `:horse:` shows :horse:.
 - **Code syntax highlighting** via [highlight.js](https://www.npmjs.com/package/highlight.js)
-- **Heading anchors**. Example: [`127.0.0.1:8000/#supports`](//127.0.0.1:8000/#supports)
+- **Heading anchors**. Example: [`markdown.horse/#supports`](//markdown.horse/#supports)
 - **Single external JS file**. Only requires one additional network resource.
 - **Version-pinned**. The `integrity` attribute guarantees that the JS won't change later and inject ads or something. Old versions will remain perpetually available (barring security issues).
 
