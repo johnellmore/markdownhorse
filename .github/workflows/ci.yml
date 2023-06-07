@@ -35,4 +35,4 @@ jobs:
           cache: "yarn"
       - run: yarn install
       - run: yarn build
-      - run: git status --short # TODO
+      - run: if [[ $(git status --short) ]]; then echo "Performing a production build generated different files than what was committed. Please re-run \"yarn build\" and commit the changes."; fi
