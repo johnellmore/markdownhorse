@@ -1,4 +1,4 @@
-name: markdownhorse
+name: ci
 
 on:
   workflow_dispatch:
