@@ -1,7 +1,7 @@
-import MarkdownIt from 'markdown-it';
-import hljs from 'highlight.js/lib/common';
-import markdownItEmoji from 'markdown-it-emoji';
-import markdownItAnchors from 'markdown-it-anchor';
+import MarkdownIt from "markdown-it";
+import hljs from "highlight.js/lib/common";
+import markdownItEmoji from "markdown-it-emoji";
+import markdownItAnchors from "markdown-it-anchor";
 import css from "./styles.css";
 
 function renderPage() {
@@ -23,14 +23,19 @@ function renderPage() {
     highlight: (str, lang) => {
       if (lang && hljs.getLanguage(lang)) {
         try {
-          return '<pre class="hljs"><code>' +
-            hljs.highlight(str, { language: lang, ignoreIllegals: true }).value +
-            '</code></pre>';
-        } catch (__) { }
+          return (
+            '<pre class="hljs"><code>' +
+            hljs.highlight(str, { language: lang, ignoreIllegals: true })
+              .value +
+            "</code></pre>"
+          );
+        } catch (_) {}
       }
 
-      return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
-    }
+      return (
+        '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + "</code></pre>"
+      );
+    },
   });
   renderer.use(markdownItEmoji);
   renderer.use(markdownItAnchors);

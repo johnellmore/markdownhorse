@@ -22,7 +22,7 @@ function sha256Hash(str) {
 const buildOut = "static/tempbuild.js";
 try {
   unlinkSync(buildOut);
-} catch (e) { }
+} catch (e) {}
 const build = await esbuild.build({
   entryPoints: ["src/markdownhorse.js"],
   bundle: true,
@@ -34,7 +34,7 @@ const build = await esbuild.build({
   // metafile: true
 });
 if (build.metafile) {
-  writeFileSync('static/build-metafile.json', JSON.stringify(build.metafile));
+  writeFileSync("static/build-metafile.json", JSON.stringify(build.metafile));
 }
 
 // generate a SHA hash and see if this is a new build, or if we can just reuse
@@ -49,7 +49,7 @@ const latestExistingBuildNum = readdirSync("static").reduce((acc, filename) => {
   }
   return acc;
 }, 0);
-const existingBuild = `static/v${latestExistingBuildNum}.js`
+const existingBuild = `static/v${latestExistingBuildNum}.js`;
 const existingBuildHash = sha256Hash(readFileSync(existingBuild));
 let distFilename;
 if (existingBuildHash === newHash) {
@@ -65,14 +65,14 @@ unlinkSync(buildOut);
 
 // generate the index.html file
 const domain = env.BUILD_DOMAIN || "markdown.horse";
-const protocol = domain === "markdown.horse" ? 'https' : 'http';
+const protocol = domain === "markdown.horse" ? "https" : "http";
 const scriptTag = `<script src="${protocol}://${domain}/${distFilename}" crossorigin integrity="sha256-${newHash}"></script>`;
 // variable replacement
 const interpolateVars = (str) => {
   return str
     .replaceAll("{LATEST_TAG}", scriptTag)
-    .replaceAll("{BUILD_DOMAIN}", domain)
-}
+    .replaceAll("{BUILD_DOMAIN}", domain);
+};
 
 const sharedMd = readFileSync("src/shared_content.md", "utf8");
 const sharedRendered = interpolateVars(sharedMd);

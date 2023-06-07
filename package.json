@@ -11,6 +11,8 @@
     "punycode": "^2.3.0"
   },
   "scripts": {
-    "build": "node src/build.mjs"
+    "build": "node src/build.mjs",
+    "formatcheck": "prettier --check src",
+    "lint": "echo 'not implemented'"
   }
 }
