@@ -5,7 +5,7 @@
 Add this line to the beginning of any Markdown document:
 
 ```html
-<script src="https://markdown.horse/v1.js" integrity="sha256-jRWwvnxYi/JqUddc/1geKvDW+8m1mkC0C7pBTkR6Uqc="></script>
+<script crossorigin src="https://markdown.horse/v1.js" integrity="sha256-jRWwvnxYi/JqUddc/1geKvDW+8m1mkC0C7pBTkR6Uqc="></script>
 ```
 
 and change the extension to `.html` or `.md.html`. When you open the file in a browser, you'll see nicely-rendered Markdown--no extra work required.
